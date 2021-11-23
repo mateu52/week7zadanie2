@@ -1,0 +1,8 @@
+.bodyApp {
+    background-image: linear-gradient(70deg, #ff9c8bea, rgb(126, 166, 247));
+    font-size: 12px;
+    font-weight: 600;
+    font-style:italic;
+    display: flex;
+    flex-wrap: wrap;
+}
