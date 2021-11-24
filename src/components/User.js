@@ -1,5 +1,6 @@
 import React from 'react';
 import "./User.css";
+import UserDetail from './UserDetail';
 function User({userData}) {
     const checkVal = (value, text) => {
         if (!value) {
@@ -25,6 +26,7 @@ function User({userData}) {
                             <p>{user.location.city}</p>
                             <p>{user.email}</p>
                             <p>{new Date(user.registered.date).toDateString()}</p>
+                            
                         </div>
                     </div>
                 )

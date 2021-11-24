@@ -5,15 +5,13 @@ import { BrowserRouter as Router, Switch, Routes, Route, Link } from "react-rout
 function App1(){
 
     return(
-        <Router>
+        
             <div>
-                <Routes>
-                    <Route patch="/">
-                        <UserList />
-                    </Route>
-                </Routes>
+                <h1>User list</h1>
+                <UserList />
+                
             </div>
-        </Router>
+        
         
     );
 }

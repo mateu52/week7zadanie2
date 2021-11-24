@@ -1,6 +1,12 @@
 import React,{useState, useEffect} from 'react';
 import User from './User';
 import './UserList.css';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route, Redirect,
+    Link
+  } from "react-router-dom";
 function UserList(){
     const [users, setUsers] = useState([]);
     useEffect(() => {
@@ -12,11 +18,20 @@ function UserList(){
             .catch(error => console.error(error))
     },[]);
     return (
+        <Router>
         <div className="bodyApp">
-                <User
-                    userData={users} 
-                />
+            <Routes>
+                <Route path="/users">
+                    <User
+                        userData={users} 
+                    />
+                </Route>
+                <Route path="/">
+                    <Link to="/users" />
+                </Route>
+            </Routes>
         </div>
+        </Router>
     )
 }
 
