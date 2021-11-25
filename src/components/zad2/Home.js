@@ -1,13 +1,23 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { BrowserRouter as Router, Switch, Routes, Route, Link } from "react-router-dom";
-
+import List from './List';
 function Home(){
-
-    return(
-            <div>
-                <h1>Home</h1>
-                <Link to="/list">List</Link>
+    const [users, setUsers] = useState([]);
+    useEffect(() => {
+        fetch('https://randomuser.me/api/?results=10')
+            .then((response) => response.json())
+            .then ((data) => {
+                setUsers(data.results);
+            })
+            .catch(error => console.error(error))
+    },[]);
+    return (
+            <div className="bodyApp">
+                        <List
+                            userData={users} 
+                        />
             </div>
-    );
+    )
+    
 }
 export default Home;

@@ -27,7 +27,7 @@ function UserList(){
                     />
                 </Route>
                 <Route path="/">
-                    <Link to="/users" />
+                    <Link to="/" />
                 </Route>
             </Routes>
         </div>
