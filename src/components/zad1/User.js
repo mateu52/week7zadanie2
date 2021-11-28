@@ -1,6 +1,6 @@
 import React from 'react';
 import "./User.css";
-import UserDetail from './UserDetail';
+import UserDetail from './zad2/UserDetail';
 function User({userData}) {
     const checkVal = (value, text) => {
         if (!value) {
