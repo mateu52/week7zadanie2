@@ -7,7 +7,7 @@ function App1(){
     return(
         
             <div>
-                <h1>User list</h1>
+                <h1>User list:</h1>
                 <UserList />
                 
             </div>
