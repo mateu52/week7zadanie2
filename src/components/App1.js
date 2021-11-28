@@ -8,7 +8,7 @@ function App1(){
         
             <div>
                 <h1>User list:</h1>
-                {/* <UserList /> */}
+                <UserList />
                 
             </div>
         

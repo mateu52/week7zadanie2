@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { BrowserRouter as Router, Switch, Routes, Route, Link } from "react-router-dom";
 import List from './List';
-import "./zad2.css";
 function Home(){
     const [users, setUsers] = useState([]);
     useEffect(() => {
